@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package horoscope;
+
+message CalculateAstroRequest {
+  string date = 1;
+  string time = 2;
+  float lat = 3;
+  float lon = 4;
+}
+
+message CalculateAstroResponse {
+    repeated Planet planets = 1;
+    repeated Planet currentPlanets = 2;
+    Houses houses = 3;
+    Houses current_houses = 4;
+    repeated Sign signs = 5;
+}
+
+// Define the horoscope service
+service HoroscopeService {
+  rpc CalculateAstro (CalculateAstroRequest) returns (CalculateAstroResponse);
+}
+
+// Message representing a planet's data.
+message Planet {
+    string name = 1;
+    double longitude = 2;
+}
+  
+  // Message representing a house's data.
+  // Define the fields based on your actual house structure.
+message Houses {
+    repeated int32 house = 1;
+    double ascendant = 2;
+    double mc = 3;
+    double armc = 4;
+    double vertex = 5;
+    double equatorialAscendant = 6;
+    double kochCoAscendant = 7;
+    double munkaseyCoAscendant = 8;
+    double munkaseyPolarAscendant = 9;
+    }
+
+// Message representing a sign's data.
+// Define the fields based on your actual sign structure.
+message Sign {
+    string name = 1;
+    string sign = 2;
+    int32 house = 3;
+}
+  

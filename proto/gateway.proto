@@ -1,0 +1,147 @@
+syntax = "proto3";
+
+package gateway;
+
+// Service Definition
+service GatewayService {
+    rpc GetHoroscopeAnalysis (GetHoroscopeAnalysisRequest) returns (GetHoroscopeAnalysisResponse);
+}
+
+message GetHoroscopeAnalysisRequest {
+  string date = 1;
+  string time = 2;
+  double lat = 3;
+  double lon = 4;
+}
+// Response Message
+message GetHoroscopeAnalysisResponse {
+    Analysis analysis = 1;
+    HoroscopeData data = 2;
+}
+
+message Analysis {
+    Cusp cusp = 1;
+    PlanetInfo planet = 2;
+    AspectInfo aspect = 3;
+    TransitInfo transit = 4;
+    string ascendant = 5;
+    Horoscope horoscope = 6;
+    string summary = 7;
+}
+
+message HoroscopeData {
+    repeated Planet planets = 1;
+    repeated Planet current_planets = 2;
+    Houses houses = 3;
+    Houses current_houses = 4;
+    repeated Sign signs = 5;
+}
+
+// Planet Message
+message Planet {
+    string name = 1;
+    string longitude = 2;
+}
+
+// Houses Message
+message Houses {
+    repeated int32 house = 1;
+    double ascendant = 2;
+    double mc = 3;
+    double armc = 4;
+    double vertex = 5;
+    double equatorial_ascendant = 6;
+    double koch_co_ascendant = 7;
+    double munkasey_co_ascendant = 8;
+    double munkasey_polar_ascendant = 9;
+}
+
+// Sign Message
+message Sign {
+    string name = 1;
+    string sign = 2;
+    int32 house = 3;
+}
+
+// Cusp Message
+message Cusp {
+    repeated string headers = 1;
+    repeated CuspData data = 2;
+    repeated string analysis = 3;
+}
+
+// Cusp Data Message
+message CuspData {
+    string house = 1;                   // House
+    string start_longitude = 2;         // Cusp Longitude (°)
+    string zodiac_sign = 3;             // Zodiac Sign
+    string degrees = 4;                 // Degree
+}
+
+// Planet Information Message
+message PlanetInfo {
+    repeated string headers = 1;
+    repeated PlanetData data = 2;
+    repeated string analysis = 3;
+}
+
+// Planet Data Message
+message PlanetData {
+    string planet = 1;            // Planet
+    string longitude = 2;         // Longitude (°)
+    string zodiac_sign = 3;       // Zodiac Sign
+    string degrees = 4;           // Degree
+    string house = 5;             // House
+}
+
+// Aspect Information Message
+message AspectInfo {
+    repeated string headers = 1;
+    repeated AspectData data = 2;
+    repeated string analysis = 3;
+}
+
+// Aspect Data Message
+message AspectData {
+    string planet1 = 1;           // Planet1
+    string planet2 = 2;           // Planet2
+    string aspect = 3;            // Aspect
+    string angle = 4;             // Angle (°)
+}
+
+// Transit Information Message
+message TransitInfo {
+    repeated string headers = 1;
+    repeated TransitData data = 2;
+    repeated string analysis = 3;
+}
+
+// Transit Data Message
+message TransitData {
+    string planet = 1;                             // Planet
+    string current_longitude = 2;                  // Current Longitude (°)
+    string zodiac_sign = 3;                        // Zodiac Sign
+    string degree = 4;                             // Degree
+    string corresponding_natal_planet = 5;         // Natal Planet
+    string aspect_type = 6;                        // Aspect Type
+    string angle = 7;                              // Angle (°)
+    string influence = 8;                          // Influence
+}
+
+// Horoscope Message
+message Horoscope {
+    string day = 1;
+    string month = 2;
+    string year = 3;
+}
+
+// Enum Definitions (Optional)
+enum AspectType {
+    UNKNOWN = 0;
+    CONJUNCTION = 1;    // Conjunction
+    OPPOSITION = 2;     // Opposition
+    TRINE = 3;          // Trine
+    SQUARE = 4;         // Square
+    SEXTILE = 5;        // Sextile
+    INCONJUNCTION = 6;  // Inconjunction
+}
