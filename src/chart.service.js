@@ -4,6 +4,7 @@ import { GetHoroscopeAnalysisRequest } from "./proto/gateway_pb";
 
 const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
 const API_VERSION = process.env.REACT_APP_API_VERSION || 1;
+console.log("version", API_VERSION);
 
 const client = new GatewayServiceClient(BASE_URL);
 
