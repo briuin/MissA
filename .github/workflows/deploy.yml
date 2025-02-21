@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main  # Trigger deployment when pushing to the 'main' branch
@@ -24,6 +25,7 @@ jobs:
       - name: Build Project
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          REACT_APP_API_VERSION: ${{ secrets.REACT_APP_API_VERSION }}
         run: npm run build
 
       - name: Deploy to GitHub Pages
