@@ -3,25 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AuthProvider } from 'react-oidc-context';
+import { AuthProvider } from './context/AuthContext';
 
-const oidcConfig = {
-  authority: 'https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_GFL3aUgeQ', // TODO: Replace with your OIDC provider
-  client_id: '7ch4ftpn2kogvsnqr0d4eumjic', // TODO: Replace with your client ID
-  redirect_uri: window.location.origin, // TODO: Replace with your redirect URI
-  response_type: 'code',
-  scope: 'openid email phone',
-  automaticSilentRenew: true,
-  loadUserInfo: true,
-  monitorSession: true,
-};
-
+// We're now using our custom AuthContext provider instead of OIDC
 const rootElement = document.getElementById('root');
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <AuthProvider {...oidcConfig}>
+      <AuthProvider>
         <App />
       </AuthProvider>
     </React.StrictMode>
