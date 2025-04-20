@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://briuin.github.io/MissA",
+  "type": "module",
   "dependencies": {
     "@astrodraw/astrochart": "^3.0.2",
     "@grpc/grpc-js": "^1.12.5",
