@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Text, Heading, Table, TableHeader, TableRow, TableCell, TableBody, Paragraph, ResponsiveContext } from "grommet";
 
-const ResponseDisplay = ({ loading, error, responseData }) => {
+interface ResponseDisplayProps {
+  loading: boolean;
+  error: string | null;
+  responseData: any;
+}
+
+const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, responseData }) => {
   if (loading) return <Text>Loading...</Text>;
   if (error) return <Text color="status-critical">Error: {error}</Text>;
 
@@ -10,7 +16,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
 
     return (
       <ResponsiveContext.Consumer>
-        {(size) => (
+        {(size: string) => (
           <Box gap="large" pad="medium">
             {/* Ascendant Section */}
             <Box background="dark-2" pad="medium" round="small" margin={{ bottom: "medium" }}>
@@ -45,7 +51,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      {cusp.headers.map((header, index) => (
+                      {cusp.headers.map((header: string, index: number) => (
                         <TableCell key={index} scope="col" border="bottom">
                           <Text>{header}</Text>
                         </TableCell>
@@ -53,22 +59,16 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {cusp.data.map((row, rowIndex) => (
-                      <TableRow key={rowIndex}>
-                        <TableCell>
-                          <Text>{formatHouse(row.house)}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.startLongitude}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.zodiacSign}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.degrees}</Text>
-                        </TableCell>
-                      </TableRow>
-                    ))}
+                    {cusp.data.map((row: any, rowIndex: number) => {
+                      return (
+                        <TableRow key={rowIndex}>
+                          <TableCell><Text>{formatHouse(row.house)}</Text></TableCell>
+                          <TableCell><Text>{row.startLongitude}</Text></TableCell>
+                          <TableCell><Text>{row.zodiacSign}</Text></TableCell>
+                          <TableCell><Text>{row.degrees}</Text></TableCell>
+                        </TableRow>
+                      );
+                    })}
                   </TableBody>
                 </Table>
                 {cusp.analysis && cusp.analysis.length > 0 && (
@@ -77,7 +77,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       Analysis:
                     </Heading>
                     <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {cusp.analysis.map((item, index) => (
+                      {cusp.analysis.map((item: string, index: number) => (
                         <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
                           {item}
                         </Text>
@@ -97,7 +97,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      {planet.headers.map((header, index) => (
+                      {planet.headers.map((header: string, index: number) => (
                         <TableCell key={index} scope="col" border="bottom">
                           <Text>{header}</Text>
                         </TableCell>
@@ -105,25 +105,17 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {planet.data.map((row, rowIndex) => (
-                      <TableRow key={rowIndex}>
-                        <TableCell>
-                          <Text>{row.planet}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.longitude}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.zodiacSign}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{row.degrees}</Text>
-                        </TableCell>
-                        <TableCell>
-                          <Text>{formatHouse(row.house)}</Text>
-                        </TableCell>
-                      </TableRow>
-                    ))}
+                    {planet.data.map((row: any, rowIndex: number) => {
+                      return (
+                        <TableRow key={rowIndex}>
+                          <TableCell><Text>{row.planet}</Text></TableCell>
+                          <TableCell><Text>{row.longitude}</Text></TableCell>
+                          <TableCell><Text>{row.zodiacSign}</Text></TableCell>
+                          <TableCell><Text>{row.degrees}</Text></TableCell>
+                          <TableCell><Text>{formatHouse(row.house)}</Text></TableCell>
+                        </TableRow>
+                      );
+                    })}
                   </TableBody>
                 </Table>
                 {planet.analysis && planet.analysis.length > 0 && (
@@ -132,7 +124,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       Analysis:
                     </Heading>
                     <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {planet.analysis.map((item, index) => (
+                      {planet.analysis.map((item: string, index: number) => (
                         <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
                           {item}
                         </Text>
@@ -153,7 +145,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        {aspect.headers.map((header, index) => (
+                        {aspect.headers.map((header: string, index: number) => (
                           <TableCell key={index} scope="col" border="bottom">
                             <Text>{header}</Text>
                           </TableCell>
@@ -161,22 +153,16 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {aspect.data.map((row, rowIndex) => (
-                        <TableRow key={rowIndex}>
-                          <TableCell>
-                            <Text>{row.planet1}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.planet2}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.aspect}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.angle}</Text>
-                          </TableCell>
-                        </TableRow>
-                      ))}
+                      {aspect.data.map((row: any, rowIndex: number) => {
+                        return (
+                          <TableRow key={rowIndex}>
+                            <TableCell><Text>{row.planet1}</Text></TableCell>
+                            <TableCell><Text>{row.planet2}</Text></TableCell>
+                            <TableCell><Text>{row.aspect}</Text></TableCell>
+                            <TableCell><Text>{row.angle}</Text></TableCell>
+                          </TableRow>
+                        );
+                      })}
                     </TableBody>
                   </Table>
                 ) : (
@@ -188,7 +174,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       Analysis:
                     </Heading>
                     <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {aspect.analysis.map((item, index) => (
+                      {aspect.analysis.map((item: string, index: number) => (
                         <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
                           {item}
                         </Text>
@@ -209,7 +195,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        {transit.headers.map((header, index) => (
+                        {transit.headers.map((header: string, index: number) => (
                           <TableCell key={index} scope="col" border="bottom">
                             <Text>{header}</Text>
                           </TableCell>
@@ -217,34 +203,20 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {transit.data.map((row, rowIndex) => (
-                        <TableRow key={rowIndex}>
-                          <TableCell>
-                            <Text>{row.planet}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.current_longitude}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.zodiac_sign}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.degree}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.corresponding_natal_planet}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.aspect_type}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.angle}</Text>
-                          </TableCell>
-                          <TableCell>
-                            <Text>{row.influence}</Text>
-                          </TableCell>
-                        </TableRow>
-                      ))}
+                      {transit.data.map((row: any, rowIndex: number) => {
+                        return (
+                          <TableRow key={rowIndex}>
+                            <TableCell><Text>{row.planet}</Text></TableCell>
+                            <TableCell><Text>{row.current_longitude}</Text></TableCell>
+                            <TableCell><Text>{row.zodiac_sign}</Text></TableCell>
+                            <TableCell><Text>{row.degree}</Text></TableCell>
+                            <TableCell><Text>{row.corresponding_natal_planet}</Text></TableCell>
+                            <TableCell><Text>{row.aspect_type}</Text></TableCell>
+                            <TableCell><Text>{row.angle}</Text></TableCell>
+                            <TableCell><Text>{row.influence}</Text></TableCell>
+                          </TableRow>
+                        );
+                      })}
                     </TableBody>
                   </Table>
                 ) : (
@@ -256,7 +228,7 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
                       Analysis:
                     </Heading>
                     <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {transit.analysis.map((item, index) => (
+                      {transit.analysis.map((item: string, index: number) => (
                         <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
                           {item}
                         </Text>
@@ -289,11 +261,11 @@ const ResponseDisplay = ({ loading, error, responseData }) => {
  * Helper function to format house names for display.
  * Converts "firstHouse" to "First House", etc.
  */
-const formatHouse = (house) => {
+const formatHouse = (house: string) => {
   if (!house) return "";
   return house
     .replace(/([A-Z])/g, ' $1') // Add space before capital letters
-    .replace(/^./, str => str.toUpperCase()) // Capitalize first letter
+    .replace(/^./, (str: string) => str.toUpperCase()) // Capitalize first letter
     .trim();
 };
 

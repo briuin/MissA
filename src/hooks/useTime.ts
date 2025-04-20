@@ -12,16 +12,16 @@ const TIME_UNIT = {
   HOUR: 24,
 };
 
-export const useTime = (targetTimezone) => {
-  const validateDateFormat = (date, format) =>
+export const useTime = (targetTimezone: string) => {
+  const validateDateFormat = (date: string, format: string) =>
     dayjs(date, format).format(format) === date;
 
-  const formatTimestamp = (data, format) => {
+  const formatTimestamp = (data: string, format?: string) => {
     const targetFormat = format || "YYYY-MM-DD HH:mm:ss";
     return dayjs(data).tz(targetTimezone).format(targetFormat);
   };
 
-  const getUtcOffset = (data, unit) => {
+  const getUtcOffset = (data: string, unit?: string) => {
     const targetUnit = unit || "HOUR";
     const offsetInMinute = dayjs(data).tz(targetTimezone).utcOffset();
     return targetUnit === "HOUR"
@@ -29,7 +29,7 @@ export const useTime = (targetTimezone) => {
       : offsetInMinute;
   };
 
-  const getDateByTimezone = (date, time, tz) => {
+  const getDateByTimezone = (date: string, time: string, tz: string) => {
     return dayjs.tz(`${date} ${time}`, tz).utc();
   } 
 

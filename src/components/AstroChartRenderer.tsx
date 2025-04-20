@@ -1,16 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "@astrodraw/astrochart";
 
-const AstroChartRenderer = ({ data }) => {
-  const chartRef = useRef(null);
+interface Planet {
+  name: string;
+  longitude: number;
+}
+interface Houses { house: number[]; }
+interface ChartData {
+  planets: Planet[];
+  houses: Houses;
+  currentPlanets: Planet[];
+  currentHouses: Houses;
+}
+
+const AstroChartRenderer: React.FC<{ data: ChartData }> = ({ data }) => {
+  const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (chartRef.current && data?.planets && data?.houses?.house) {
       // Clear previous chart
-      chartRef.current.innerHTML = "";
+      (chartRef.current as HTMLDivElement).innerHTML = "";
 
       const chartData = {
-        planets: data.planets.reduce((obj, planet) => {
+        planets: data.planets.reduce<Record<string, number[]>>((obj, planet) => {
           obj[planet.name] = [planet.longitude];
           return obj;
         }, {}), // Convert planets data into the expected format
@@ -18,7 +30,7 @@ const AstroChartRenderer = ({ data }) => {
       };
 
       const chartTransit = {
-        planets: data.currentPlanets.reduce((obj, planet) => {
+        planets: data.currentPlanets.reduce<Record<string, number[]>>((obj, planet) => {
           obj[planet.name] = [planet.longitude];
           return obj;
         }, {}), // Convert planets data into the expected format
@@ -27,26 +39,9 @@ const AstroChartRenderer = ({ data }) => {
 
       const chart = new Chart('chart', 640, 640, {
         DEBUG: true,
-        chartType: "natal", // Chart type (natal chart)
-        colors: {
-          background: "#1a1a1a", // Dark mode background
-          primary: "#ffffff", // Primary text color
-        },
       });
-     const radix = chart.radix(chartData);
-     const transit = radix.transit(chartTransit);
-     transit.aspects();
-
-
-      //   // Create new chart
-        // new Chart(chartRef.current, {
-        //   ...chartData,
-        //   chartType: "natal", // Chart type (natal chart)
-        //   colors: {
-        //     background: "#1a1a1a", // Dark mode background
-        //     primary: "#ffffff", // Primary text color
-        //   },
-        // });
+      const radix = chart.radix(chartData);
+      const transit = radix.transit(chartTransit);
     }
   }, [data]);
 
