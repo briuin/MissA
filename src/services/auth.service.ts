@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 // API base URL - replace with your actual API URL
-const API_BASE_URL = 'http://localhost:8080'; // Adjust to your NestJS server URL
+const API_BASE_URL =`${BASE_URL}/api`; // Adjust to your NestJS server URL
 
 export interface SignUpDto {
   email: string;
