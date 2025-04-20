@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Select } from "grommet";
 import { Country, State, City } from "country-state-city";
 
 const CountryType = Country.getAllCountries()[0];
@@ -33,42 +32,54 @@ const CountryStateCitySelector: React.FC<CountryStateCitySelectorProps> = ({
   setSelectedCity,
 }) => {
   return (
-    <Box direction="column" gap="small" pad="small">
+    <div className="flex flex-col gap-2 w-full">
       {/* Country Selector */}
-      <Select
-        options={countries.map((c: CountryType) => c.name)}
+      <select
+        className="select select-bordered w-full"
         value={selectedCountry?.name || ""}
-        placeholder="Select Country"
-        onChange={({ option }) => {
-          const country = countries.find((c: CountryType) => c.name === option) || null;
+        onChange={e => {
+          const country = countries.find((c: CountryType) => c.name === e.target.value) || null;
           setSelectedCountry(country);
         }}
-      />
+      >
+        <option value="" disabled>Select Country</option>
+        {countries.map((c: CountryType) => (
+          <option key={c.isoCode} value={c.name}>{c.name}</option>
+        ))}
+      </select>
 
       {/* State Selector */}
-      <Select
-        options={states.map((s: StateType) => s.name)}
+      <select
+        className="select select-bordered w-full"
         value={selectedState?.name || ""}
-        placeholder="Select State"
-        onChange={({ option }) => {
-          const state = states.find((s: StateType) => s.name === option) || null;
+        onChange={e => {
+          const state = states.find((s: StateType) => s.name === e.target.value) || null;
           setSelectedState(state);
         }}
         disabled={!selectedCountry}
-      />
+      >
+        <option value="" disabled>Select State</option>
+        {states.map((s: StateType) => (
+          <option key={s.isoCode} value={s.name}>{s.name}</option>
+        ))}
+      </select>
 
       {/* City Selector */}
-      <Select
-        options={cities.map((c: CityType) => c.name)}
+      <select
+        className="select select-bordered w-full"
         value={selectedCity?.name || ""}
-        placeholder="Select City"
-        onChange={({ option }) => {
-          const city = cities.find((c: CityType) => c.name === option) || null;
+        onChange={e => {
+          const city = cities.find((c: CityType) => c.name === e.target.value) || null;
           setSelectedCity(city);
         }}
         disabled={!selectedState}
-      />
-    </Box>
+      >
+        <option value="" disabled>Select City</option>
+        {cities.map((c: CityType) => (
+          <option key={c.name} value={c.name}>{c.name}</option>
+        ))}
+      </select>
+    </div>
   );
 };
 

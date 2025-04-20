@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Text, Heading, Table, TableHeader, TableRow, TableCell, TableBody, Paragraph, ResponsiveContext } from "grommet";
 
 interface ResponseDisplayProps {
   loading: boolean;
@@ -8,253 +7,195 @@ interface ResponseDisplayProps {
 }
 
 const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, responseData }) => {
-  if (loading) return <Text>Loading...</Text>;
-  if (error) return <Text color="status-critical">Error: {error}</Text>;
+  if (loading) return <span className="loading loading-spinner loading-md"></span>;
+  if (error) return <div className="alert alert-error"><span>Error: {error}</span></div>;
 
   if (responseData && responseData.analysis) {
     const { cusp, planet, aspect, transit, ascendant, horoscope, summary } = responseData.analysis;
 
     return (
-      <ResponsiveContext.Consumer>
-        {(size: string) => (
-          <Box gap="large" pad="medium">
-            {/* Ascendant Section */}
-            <Box background="dark-2" pad="medium" round="small" margin={{ bottom: "medium" }}>
-              <Heading level={3} margin="none">
-                Ascendant
-              </Heading>
-              <Paragraph fill>{ascendant}</Paragraph>
-            </Box>
+      <div className="flex flex-col gap-6">
+        {/* Ascendant Section */}
+        <div className="bg-base-200 rounded-lg p-4 mb-4">
+          <h3 className="text-xl font-semibold mb-2">Ascendant</h3>
+          <p className="leading-relaxed">{ascendant}</p>
+        </div>
 
-            {/* Horoscope Overview */}
-            <Box background="dark-2" pad="medium" round="small" margin={{ bottom: "medium" }}>
-              <Heading level={3} margin="none">
-                Horoscope Overview
-              </Heading>
-              <Paragraph fill>
-                <strong>Day:</strong> {horoscope?.day}
-              </Paragraph>
-              <Paragraph fill>
-                <strong>Month:</strong> {horoscope?.month}
-              </Paragraph>
-              <Paragraph fill>
-                <strong>Year:</strong> {horoscope?.year}
-              </Paragraph>
-            </Box>
+        {/* Horoscope Overview */}
+        <div className="bg-base-200 rounded-lg p-4 mb-4">
+          <h3 className="text-xl font-semibold mb-2">Horoscope Overview</h3>
+          <p><strong>Day:</strong> {horoscope?.day}</p>
+          <p><strong>Month:</strong> {horoscope?.month}</p>
+          <p><strong>Year:</strong> {horoscope?.year}</p>
+        </div>
 
-            {/* Cusp Table */}
-            {cusp && (
-              <Box background="dark-2" pad="medium" round="small" overflow={{ horizontal: "auto" }} margin={{ bottom: "medium" }}>
-                <Heading level={3} margin="none">
-                  Cusp Analysis
-                </Heading>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      {cusp.headers.map((header: string, index: number) => (
-                        <TableCell key={index} scope="col" border="bottom">
-                          <Text>{header}</Text>
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {cusp.data.map((row: any, rowIndex: number) => {
-                      return (
-                        <TableRow key={rowIndex}>
-                          <TableCell><Text>{formatHouse(row.house)}</Text></TableCell>
-                          <TableCell><Text>{row.startLongitude}</Text></TableCell>
-                          <TableCell><Text>{row.zodiacSign}</Text></TableCell>
-                          <TableCell><Text>{row.degrees}</Text></TableCell>
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-                {cusp.analysis && cusp.analysis.length > 0 && (
-                  <Box margin={{ top: "medium" }}>
-                    <Heading level={4} margin={{ bottom: "small" }}>
-                      Analysis:
-                    </Heading>
-                    <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {cusp.analysis.map((item: string, index: number) => (
-                        <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
-                          {item}
-                        </Text>
-                      ))}
-                    </Box>
-                  </Box>
-                )}
-              </Box>
+        {/* Cusp Table */}
+        {cusp && (
+          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto">
+            <h3 className="text-xl font-semibold mb-2">Cusp Analysis</h3>
+            <table className="table table-zebra w-full">
+              <thead>
+                <tr>
+                  {cusp.headers.map((header: string, index: number) => (
+                    <th key={index}>{header}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {cusp.data.map((row: any, rowIndex: number) => (
+                  <tr key={rowIndex}>
+                    <td>{formatHouse(row.house)}</td>
+                    <td>{row.startLongitude}</td>
+                    <td>{row.zodiacSign}</td>
+                    <td>{row.degrees}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {cusp.analysis && cusp.analysis.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-semibold mb-2">Analysis:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  {cusp.analysis.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             )}
-
-            {/* Planetary Positions Table */}
-            {planet && (
-              <Box background="dark-2" pad="medium" round="small" overflow={{ horizontal: "auto" }} margin={{ bottom: "medium" }}>
-                <Heading level={3} margin="none">
-                  Planetary Positions
-                </Heading>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      {planet.headers.map((header: string, index: number) => (
-                        <TableCell key={index} scope="col" border="bottom">
-                          <Text>{header}</Text>
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {planet.data.map((row: any, rowIndex: number) => {
-                      return (
-                        <TableRow key={rowIndex}>
-                          <TableCell><Text>{row.planet}</Text></TableCell>
-                          <TableCell><Text>{row.longitude}</Text></TableCell>
-                          <TableCell><Text>{row.zodiacSign}</Text></TableCell>
-                          <TableCell><Text>{row.degrees}</Text></TableCell>
-                          <TableCell><Text>{formatHouse(row.house)}</Text></TableCell>
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-                {planet.analysis && planet.analysis.length > 0 && (
-                  <Box margin={{ top: "medium" }}>
-                    <Heading level={4} margin={{ bottom: "small" }}>
-                      Analysis:
-                    </Heading>
-                    <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {planet.analysis.map((item: string, index: number) => (
-                        <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
-                          {item}
-                        </Text>
-                      ))}
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            )}
-
-            {/* Aspect Table */}
-            {aspect && (
-              <Box background="dark-2" pad="medium" round="small" overflow={{ horizontal: "auto" }} margin={{ bottom: "medium" }}>
-                <Heading level={3} margin="none">
-                  Aspects
-                </Heading>
-                {aspect.headers.length > 0 && aspect.data.length > 0 ? (
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        {aspect.headers.map((header: string, index: number) => (
-                          <TableCell key={index} scope="col" border="bottom">
-                            <Text>{header}</Text>
-                          </TableCell>
-                        ))}
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {aspect.data.map((row: any, rowIndex: number) => {
-                        return (
-                          <TableRow key={rowIndex}>
-                            <TableCell><Text>{row.planet1}</Text></TableCell>
-                            <TableCell><Text>{row.planet2}</Text></TableCell>
-                            <TableCell><Text>{row.aspect}</Text></TableCell>
-                            <TableCell><Text>{row.angle}</Text></TableCell>
-                          </TableRow>
-                        );
-                      })}
-                    </TableBody>
-                  </Table>
-                ) : (
-                  <Paragraph>No aspect data available.</Paragraph>
-                )}
-                {aspect.analysis && aspect.analysis.length > 0 && (
-                  <Box margin={{ top: "medium" }}>
-                    <Heading level={4} margin={{ bottom: "small" }}>
-                      Analysis:
-                    </Heading>
-                    <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {aspect.analysis.map((item: string, index: number) => (
-                        <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
-                          {item}
-                        </Text>
-                      ))}
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            )}
-
-            {/* Transit Table */}
-            {transit && (
-              <Box background="dark-2" pad="medium" round="small" overflow={{ horizontal: "auto" }} margin={{ bottom: "medium" }}>
-                <Heading level={3} margin="none">
-                  Transits
-                </Heading>
-                {transit.headers.length > 0 && transit.data.length > 0 ? (
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        {transit.headers.map((header: string, index: number) => (
-                          <TableCell key={index} scope="col" border="bottom">
-                            <Text>{header}</Text>
-                          </TableCell>
-                        ))}
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {transit.data.map((row: any, rowIndex: number) => {
-                        return (
-                          <TableRow key={rowIndex}>
-                            <TableCell><Text>{row.planet}</Text></TableCell>
-                            <TableCell><Text>{row.current_longitude}</Text></TableCell>
-                            <TableCell><Text>{row.zodiac_sign}</Text></TableCell>
-                            <TableCell><Text>{row.degree}</Text></TableCell>
-                            <TableCell><Text>{row.corresponding_natal_planet}</Text></TableCell>
-                            <TableCell><Text>{row.aspect_type}</Text></TableCell>
-                            <TableCell><Text>{row.angle}</Text></TableCell>
-                            <TableCell><Text>{row.influence}</Text></TableCell>
-                          </TableRow>
-                        );
-                      })}
-                    </TableBody>
-                  </Table>
-                ) : (
-                  <Paragraph>No transit data available.</Paragraph>
-                )}
-                {transit.analysis && transit.analysis.length > 0 && (
-                  <Box margin={{ top: "medium" }}>
-                    <Heading level={4} margin={{ bottom: "small" }}>
-                      Analysis:
-                    </Heading>
-                    <Box as="ul" pad={{ left: "medium" }} gap="medium">
-                      {transit.analysis.map((item: string, index: number) => (
-                        <Text as="li" key={index} style={{ lineHeight: "1.8" }}>
-                          {item}
-                        </Text>
-                      ))}
-                    </Box>
-                  </Box>
-                )}
-              </Box>
-            )}
-
-            {/* Summary Section */}
-            <Box background="dark-2" pad="medium" round="small">
-              <Heading level={3} margin="none">
-                Summary
-              </Heading>
-              <Paragraph fill style={{ lineHeight: "1.8" }}>
-                {summary}
-              </Paragraph>
-            </Box>
-          </Box>
+          </div>
         )}
-      </ResponsiveContext.Consumer>
+
+        {/* Planetary Positions Table */}
+        {planet && (
+          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto">
+            <h3 className="text-xl font-semibold mb-2">Planetary Positions</h3>
+            <table className="table table-zebra w-full">
+              <thead>
+                <tr>
+                  {planet.headers.map((header: string, index: number) => (
+                    <th key={index}>{header}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {planet.data.map((row: any, rowIndex: number) => (
+                  <tr key={rowIndex}>
+                    <td>{row.planet}</td>
+                    <td>{row.longitude}</td>
+                    <td>{row.zodiacSign}</td>
+                    <td>{row.degrees}</td>
+                    <td>{formatHouse(row.house)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {planet.analysis && planet.analysis.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-semibold mb-2">Analysis:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  {planet.analysis.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Aspect Table */}
+        {aspect && (
+          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto">
+            <h3 className="text-xl font-semibold mb-2">Aspects</h3>
+            {aspect.headers.length > 0 && aspect.data.length > 0 ? (
+              <table className="table table-zebra w-full">
+                <thead>
+                  <tr>
+                    {aspect.headers.map((header: string, index: number) => (
+                      <th key={index}>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {aspect.data.map((row: any, rowIndex: number) => (
+                    <tr key={rowIndex}>
+                      <td>{row.planet1}</td>
+                      <td>{row.planet2}</td>
+                      <td>{row.aspect}</td>
+                      <td>{row.angle}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <div>No aspect data available.</div>
+            )}
+            {aspect.analysis && aspect.analysis.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-semibold mb-2">Analysis:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  {aspect.analysis.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Transit Table */}
+        {transit && (
+          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto">
+            <h3 className="text-xl font-semibold mb-2">Transits</h3>
+            {transit.headers.length > 0 && transit.data.length > 0 ? (
+              <table className="table table-zebra w-full">
+                <thead>
+                  <tr>
+                    {transit.headers.map((header: string, index: number) => (
+                      <th key={index}>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {transit.data.map((row: any, rowIndex: number) => (
+                    <tr key={rowIndex}>
+                      <td>{row.planet}</td>
+                      <td>{row.current_longitude}</td>
+                      <td>{row.zodiac_sign}</td>
+                      <td>{row.degree}</td>
+                      <td>{row.corresponding_natal_planet}</td>
+                      <td>{row.aspect_type}</td>
+                      <td>{row.angle}</td>
+                      <td>{row.influence}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <div>No transit data available.</div>
+            )}
+            {transit.analysis && transit.analysis.length > 0 && (
+              <div className="mt-4">
+                <h4 className="font-semibold mb-2">Analysis:</h4>
+                <ul className="list-disc ml-6 space-y-1">
+                  {transit.analysis.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Summary Section */}
+        <div className="bg-base-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-2">Summary</h3>
+          <p className="leading-relaxed">{summary}</p>
+        </div>
+      </div>
     );
   }
 
-  return <Text>No data to display. Please submit the form.</Text>;
+  return <div className="text-base-content">No data to display. Please submit the form.</div>;
 };
 
 /**

@@ -1,14 +1,4 @@
 import React from "react";
-import {
-  Grommet,
-  Box,
-  Button,
-  Heading,
-  Footer,
-  Text,
-  ResponsiveContext,
-} from "grommet";
-import { darkTheme } from "./theme";
 import useAstroStore from "./store/astro.store";
 import DateTimeSelector from "./ui/DateTimeSelector";
 import CountryStateCitySelector from "./components/CountryStateCitySelector";
@@ -99,107 +89,78 @@ const Calculator = () => {
   };
 
   return (
-    <Grommet theme={darkTheme} full="min">
-      <ResponsiveContext.Consumer>
-        {(size: string) => (
-          <Box fill align="center" pad="large">
-            <Box
-              direction="column"
-              gap="large"
-              width={size === "small" ? "100%" : "xlarge"}
-              align="center"
-              background="background"
-              round="small"
-              pad="medium"
-              elevation="medium"
+    <div className="min-h-screen flex flex-col items-center bg-base-200">
+      <div className="flex-1 flex flex-col items-center w-full p-6">
+        <div className="w-full max-w-4xl bg-base-100 rounded-xl shadow-xl p-8 flex flex-col gap-8">
+          {/* Heading */}
+          <h2 className="text-3xl font-bold text-center">Astrological Chart Data</h2>
+
+          {/* Input Section */}
+          <div className="w-full flex flex-col gap-4 bg-base-200 rounded-lg p-4">
+            {/* Date and Time Selector */}
+            <DateTimeSelector
+              date={date}
+              time={time}
+              setDate={setDate}
+              setTime={setTime}
+            />
+
+            {/* Country, State, City Selector */}
+            <CountryStateCitySelector
+              countries={countries}
+              states={states}
+              cities={cities}
+              selectedCountry={selectedCountry}
+              selectedState={selectedState}
+              selectedCity={selectedCity}
+              setSelectedCountry={setSelectedCountry}
+              setSelectedState={setSelectedState}
+              setSelectedCity={setSelectedCity}
+            />
+
+            {/* Latitude and Longitude Display */}
+            {false && <LatLonDisplay lat={lat} lon={lon} />}
+
+            {/* Submit Button */}
+            <button
+              className="btn btn-primary self-center"
+              onClick={handleSubmit}
+              disabled={loading}
             >
-              {/* Heading */}
-              <Heading level="2" margin="none" alignSelf="center">
-                Astrological Chart Data
-              </Heading>
+              {loading ? "Loading..." : "Get Chart"}
+            </button>
+          </div>
 
-              {/* Input Section */}
-              <Box
-                width="100%"
-                gap="medium"
-                pad={{ horizontal: "medium", vertical: "small" }}
-                background={size === "small" ? "dark-2" : "background"}
-                round="small"
-              >
-                {/* Date and Time Selector */}
-                <DateTimeSelector
-                  date={date}
-                  time={time}
-                  setDate={setDate}
-                  setTime={setTime}
-                />
+          {/* Output Section */}
+          <div className="w-full flex flex-col gap-4 bg-base-300 rounded-lg p-6 mt-4 items-center">
+            {/* Chart Renderer */}
+            {responseData && (
+              <AstroChartRenderer
+                data={{
+                  planets: responseData.data.planets,
+                  houses: responseData.data.houses,
+                  currentPlanets: responseData.data.currentPlanets,
+                  currentHouses: responseData.data.currentHouses,
+                }}
+              />
+            )}
 
-                {/* Country, State, City Selector */}
-                <CountryStateCitySelector
-                  countries={countries}
-                  states={states}
-                  cities={cities}
-                  selectedCountry={selectedCountry}
-                  selectedState={selectedState}
-                  selectedCity={selectedCity}
-                  setSelectedCountry={setSelectedCountry}
-                  setSelectedState={setSelectedState}
-                  setSelectedCity={setSelectedCity}
-                />
-
-                {/* Latitude and Longitude Display */}
-                { false && <LatLonDisplay lat={lat} lon={lon} />}
-
-                {/* Submit Button */}
-                <Button
-                  primary
-                  label={loading ? "Loading..." : "Get Chart"}
-                  onClick={handleSubmit}
-                  disabled={loading}
-                  alignSelf="center"
-                />
-              </Box>
-
-              {/* Output Section */}
-              <Box
-                width="100%"
-                gap="medium"
-                background={size === "small" ? "dark-2" : "dark-1"}
-                pad="medium"
-                round="small"
-                elevation="small"
-                align="center"
-                margin={{ top: "medium" }}
-              >
-                {/* Chart Renderer */}
-                {responseData && (
-                  <AstroChartRenderer
-                    data={{
-                      planets: responseData.data.planets,
-                      houses: responseData.data.houses,
-                      currentPlanets: responseData.data.currentPlanets,
-                      currentHouses: responseData.data.currentHouses,
-                    }}
-                  />
-                )}
-
-                {/* Response Display */}
-                <ResponseDisplay
-                  loading={loading}
-                  error={error}
-                  responseData={responseData}
-                />
-              </Box>
-            </Box>
-
-            {/* Footer */}
-            <Footer background="background" pad="medium">
-              <Text size="small">© 2025 Astrological Insights</Text>
-            </Footer>
-          </Box>
-        )}
-      </ResponsiveContext.Consumer>
-    </Grommet>
+            {/* Response Display */}
+            <ResponseDisplay
+              loading={loading}
+              error={error}
+              responseData={responseData}
+            />
+          </div>
+        </div>
+      </div>
+      {/* Footer */}
+      <footer className="footer footer-center p-4 bg-base-100 text-base-content">
+        <aside>
+          <span className="text-sm">© 2025 Astrological Insights</span>
+        </aside>
+      </footer>
+    </div>
   );
 };
 

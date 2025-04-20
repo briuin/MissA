@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Text } from "grommet";
 
 interface LatLonDisplayProps {
   lat: number;
@@ -7,10 +6,10 @@ interface LatLonDisplayProps {
 }
 
 const LatLonDisplay: React.FC<LatLonDisplayProps> = ({ lat, lon }) => (
-  <Box direction="row" gap="medium" pad="small">
-    <Text>Latitude: {lat}</Text>
-    <Text>Longitude: {lon}</Text>
-  </Box>
+  <div className="flex flex-row gap-4 p-2">
+    <span className="text-base">Latitude: {lat}</span>
+    <span className="text-base">Longitude: {lon}</span>
+  </div>
 );
 
 export default LatLonDisplay;
