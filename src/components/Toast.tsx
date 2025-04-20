@@ -71,33 +71,33 @@ const Toast: React.FC<ToastProps> = ({ message, onClose, type = 'success', durat
   };
 
   return (
-    <div className="toast toast-top toast-end z-50">
+    <div className="toast toast-top toast-end z-[9999]">
       <div 
         className={`
           alert ${getAlertClass()} shadow-lg rounded-lg border
-          transform transition-all duration-300 ease-in-out
+          transform transition-all duration-300 ease-in-out flex 
           ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
         `}
         style={{ minWidth: '300px', maxWidth: '100%' }}
       >
-        <div className="flex items-start">
-          <div className="flex-shrink-0 mt-0.5">{getIcon()}</div>
-          <div className="ml-3 flex-1">
-            <p className="font-medium">{message}</p>
+        <div className="flex items-start justify-between w-full">
+          <div className="flex items-start">
+            <div className="flex-shrink-0 mt-0.5">{getIcon()}</div>
+            <div className="ml-3 flex-1">
+              <p className="font-medium">{message}</p>
+            </div>
           </div>
-          <div className="ml-4 flex-shrink-0">
-            <button 
-              className="inline-flex rounded-md bg-transparent text-current hover:opacity-75 focus:outline-none"
-              onClick={() => {
-                setIsVisible(false);
-                setTimeout(onClose, 300);
-              }}
-            >
-              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
+          <button 
+            className="flex-shrink-0 ml-4 inline-flex rounded-md bg-transparent text-current hover:opacity-75 focus:outline-none self-start"
+            onClick={() => {
+              setIsVisible(false);
+              setTimeout(onClose, 300);
+            }}
+          >
+            <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

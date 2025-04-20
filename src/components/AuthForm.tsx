@@ -47,6 +47,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="your-email@example.com"
+            className={error ? 'input-error border-2 border-error' : ''}
           />
         </div>
         
@@ -59,6 +60,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
             onChange={(e) => setPassword(e.target.value)}
             required
             placeholder={formType === 'signup' ? 'Create password' : 'Enter password'}
+            className={error ? 'input-error border-2 border-error' : ''}
           />
         </div>
         

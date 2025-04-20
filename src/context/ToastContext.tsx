@@ -26,12 +26,14 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     <ToastContext.Provider value={{ showToast }}>
       {children}
       {toast && (
-        <div className="fixed top-4 right-4 z-[100]">
-          <Toast 
-            message={toast.message} 
-            type={toast.type} 
-            onClose={() => setToast(null)} 
-          />
+        <div className="fixed top-4 right-4 z-[9999]" style={{ pointerEvents: 'none' }}>
+          <div style={{ pointerEvents: 'auto' }}>
+            <Toast 
+              message={toast.message} 
+              type={toast.type} 
+              onClose={() => setToast(null)} 
+            />
+          </div>
         </div>
       )}
     </ToastContext.Provider>

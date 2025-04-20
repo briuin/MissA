@@ -89,6 +89,16 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const { showToast } = useToast();
 
+  // Reset modal state when opened
+  useEffect(() => {
+    if (isOpen) {
+      // Reset to signin form when modal is opened
+      setFormType('signin');
+      // Clear any previous errors
+      clearError();
+    }
+  }, [isOpen, clearError]);
+
   // Close modal when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
