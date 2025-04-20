@@ -3,14 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthProvider } from 'react-oidc-context';
 
+const oidcConfig = {
+  authority: 'https://your-oidc-provider.com', // TODO: Replace with your OIDC provider
+  client_id: 'your-client-id', // TODO: Replace with your client ID
+  redirect_uri: window.location.origin,
+  response_type: 'code',
+  scope: 'openid profile email',
+};
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <App />
+      <AuthProvider {...oidcConfig}>
+        <App />
+      </AuthProvider>
     </React.StrictMode>
   );
 }
