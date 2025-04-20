@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from 'react-oidc-context';
 
 const oidcConfig = {
-  authority: 'https://your-oidc-provider.com', // TODO: Replace with your OIDC provider
-  client_id: 'your-client-id', // TODO: Replace with your client ID
-  redirect_uri: window.location.origin,
+  authority: 'https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_GFL3aUgeQ', // TODO: Replace with your OIDC provider
+  client_id: '7ch4ftpn2kogvsnqr0d4eumjic', // TODO: Replace with your client ID
+  redirect_uri: window.location.origin, // TODO: Replace with your redirect URI
   response_type: 'code',
-  scope: 'openid profile email',
+  scope: 'openid email phone',
+  automaticSilentRenew: true,
+  loadUserInfo: true,
+  monitorSession: true,
 };
 
 const rootElement = document.getElementById('root');

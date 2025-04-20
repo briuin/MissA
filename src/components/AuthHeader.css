@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+.auth-header {
+  @apply bg-base-100 p-4 shadow-md flex justify-between items-center;
+}
+
+.auth-header-title {
+  @apply text-xl font-bold;
+}
+
+.user-dropdown {
+  @apply relative;
+}
+
+.dropdown-button {
+  @apply btn btn-primary flex items-center gap-2;
+}
+
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-base-100 ring-1 ring-black z-10;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-content {
+  @apply py-1;
+}
+
+.user-info {
+  @apply px-4 py-2 border-b;
+}
+
+.user-name {
+  @apply font-medium;
+}
+
+.user-email {
+  @apply text-sm text-gray-500;
+}
+
+.signout-button {
+  @apply block w-full text-left px-4 py-2 text-sm hover:bg-base-200;
+}
+
+.auth-buttons {
+  @apply flex gap-2;
+}
+
+.signin-button,
+.signup-button {
+  @apply flex items-center;
+}
+
+.icon {
+  @apply h-5 w-5 mr-1;
+}
+
+.error-container {
+  @apply bg-base-100 p-4 shadow-md;
+}
+
+.error-alert {
+  @apply alert alert-error shadow-lg;
+}
+
+.loading-container {
+  @apply flex justify-center items-center bg-base-100 p-4 shadow-md;
+}
+
+.loading-content {
+  @apply flex items-center;
+}
+
+.loading-icon {
+  @apply loading loading-spinner loading-md mr-2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
