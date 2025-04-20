@@ -83,32 +83,35 @@ const AuthHeader = () => {
       <div className="auth-header-title">Astrological Insights</div>
       
       {user && user.isAuthenticated ? (
-        <div className="user-dropdown" ref={dropdownRef}>
-          <button 
+        <div className="dropdown dropdown-end" ref={dropdownRef}>
+          <label 
+            tabIndex={0} 
+            className="btn btn-ghost btn-circle"
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="dropdown-button"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            <span>{user.email || 'User'}</span>
-          </button>
-          
-          {dropdownOpen && (
-            <div className="dropdown-menu">
-              <div className="dropdown-content">
-                <div className="user-info">
-                  <div className="user-email">{user.email}</div>
-                </div>
-                <button 
-                  onClick={handleSignOut}
-                  className="signout-button"
-                >
-                  Sign Out
-                </button>
-              </div>
+            <div className="w-10 h-10 rounded-full bg-primary text-primary-content flex items-center justify-center overflow-hidden">
+              <span className="text-lg font-semibold leading-none">{user.email?.charAt(0).toUpperCase() || 'U'}</span>
             </div>
-          )}
+          </label>
+          
+          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box ">
+            <li className="p-2 text-center border-b border-base-300">
+              <div className="font-semibold text-sm truncate ">{user.email}</div>
+            </li>
+            <li className="p-1">
+              <button 
+                onClick={handleSignOut}
+                className="btn btn-sm btn-ghost justify-start w-full"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                  <polyline points="16 17 21 12 16 7"/>
+                  <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                Sign Out
+              </button>
+            </li>
+          </ul>
         </div>
       ) : (
         <div className="auth-buttons">
