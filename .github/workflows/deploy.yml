@@ -24,8 +24,9 @@ jobs:
 
       - name: Build Project
         env:
-          REACT_APP_API_URL: ${{ vars.REACT_APP_API_URL }}
-          REACT_APP_API_VERSION: ${{ vars.REACT_APP_API_VERSION }}
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
+          VITE_API_VERSION: ${{ vars.VITE_API_VERSION }}
+          VITE_APP_TITLE: ${{ vars.VITE_APP_TITLE }}
         run: npm run build:github
 
       - name: Deploy to GitHub Pages
