@@ -61,7 +61,7 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
               <tbody>
                 {cusp.data.map((row: any, rowIndex: number) => (
                   <tr key={rowIndex}>
-                    <td>{formatHouse(row.house)}</td>
+                    <td>{row.houseLabel || formatHouse(row.house)}</td>
                     <td>{row.startLongitude}</td>
                     <td>{row.zodiacSign}</td>
                     <td>{row.degrees}</td>
@@ -97,11 +97,11 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
               <tbody>
                 {planet.data.map((row: any, rowIndex: number) => (
                   <tr key={rowIndex}>
-                    <td>{row.planet}</td>
+                    <td>{row.planetLabel || row.planet}</td>
                     <td>{row.longitude}</td>
                     <td>{row.zodiacSign}</td>
                     <td>{row.degrees}</td>
-                    <td>{formatHouse(row.house)}</td>
+                    <td>{row.houseLabel || formatHouse(row.house)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -135,9 +135,9 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
                 <tbody>
                   {aspect.data.map((row: any, rowIndex: number) => (
                     <tr key={rowIndex}>
-                      <td>{row.planet1}</td>
-                      <td>{row.planet2}</td>
-                      <td>{row.aspect}</td>
+                      <td>{row.planet1Label || row.planet1}</td>
+                      <td>{row.planet2Label || row.planet2}</td>
+                      <td>{row.aspectLabel || row.aspect}</td>
                       <td>{row.angle}</td>
                     </tr>
                   ))}
@@ -175,12 +175,15 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
                 <tbody>
                   {transit.data.map((row: any, rowIndex: number) => (
                     <tr key={rowIndex}>
-                      <td>{row.planet}</td>
+                      <td>{row.planetLabel || row.planet}</td>
                       <td>{row.currentLongitude}</td>
                       <td>{row.zodiacSign}</td>
                       <td>{row.degrees}</td>
-                      <td>{row.aspectToNatalPlanet}</td>
-                      <td>{row.aspectType}</td>
+                      <td>
+                        {row.aspectToNatalPlanetLabel ||
+                          row.aspectToNatalPlanet}
+                      </td>
+                      <td>{row.aspectTypeLabel || row.aspectType}</td>
                       <td>{row.angle}</td>
                       <td>{row.effect}</td>
                     </tr>
