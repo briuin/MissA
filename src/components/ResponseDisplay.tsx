@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface ResponseDisplayProps {
   loading: boolean;
@@ -6,12 +6,23 @@ interface ResponseDisplayProps {
   responseData: any;
 }
 
-const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, responseData }) => {
-  if (loading) return <span className="loading loading-spinner loading-md"></span>;
-  if (error) return <div className="alert alert-error"><span>Error: {error}</span></div>;
+const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
+  loading,
+  error,
+  responseData,
+}) => {
+  if (loading)
+    return <span className="loading loading-spinner loading-md"></span>;
+  if (error)
+    return (
+      <div className="alert alert-error">
+        <span>Error: {error}</span>
+      </div>
+    );
 
   if (responseData && responseData.analysis) {
-    const { cusp, planet, aspect, transit, ascendant, horoscope, summary } = responseData.analysis;
+    const { cusp, planet, aspect, transit, ascendant, horoscope, summary } =
+      responseData.analysis;
 
     return (
       <div className="flex flex-col gap-6">
@@ -24,9 +35,15 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, respo
         {/* Horoscope Overview */}
         <div className="bg-base-200 rounded-lg p-4 mb-4">
           <h3 className="text-xl font-semibold mb-2">Horoscope Overview</h3>
-          <p><strong>Day:</strong> {horoscope?.day}</p>
-          <p><strong>Month:</strong> {horoscope?.month}</p>
-          <p><strong>Year:</strong> {horoscope?.year}</p>
+          <p>
+            <strong>Day:</strong> {horoscope?.day}
+          </p>
+          <p>
+            <strong>Month:</strong> {horoscope?.month}
+          </p>
+          <p>
+            <strong>Year:</strong> {horoscope?.year}
+          </p>
         </div>
 
         {/* Cusp Table */}
@@ -159,13 +176,13 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, respo
                   {transit.data.map((row: any, rowIndex: number) => (
                     <tr key={rowIndex}>
                       <td>{row.planet}</td>
-                      <td>{row.current_longitude}</td>
-                      <td>{row.zodiac_sign}</td>
-                      <td>{row.degree}</td>
-                      <td>{row.corresponding_natal_planet}</td>
-                      <td>{row.aspect_type}</td>
+                      <td>{row.currentLongitude}</td>
+                      <td>{row.zodiacSign}</td>
+                      <td>{row.degrees}</td>
+                      <td>{row.aspectToNatalPlanet}</td>
+                      <td>{row.aspectType}</td>
                       <td>{row.angle}</td>
-                      <td>{row.influence}</td>
+                      <td>{row.effect}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -195,7 +212,11 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, respo
     );
   }
 
-  return <div className="text-base-content">No data to display. Please submit the form.</div>;
+  return (
+    <div className="text-base-content">
+      No data to display. Please submit the form.
+    </div>
+  );
 };
 
 /**
@@ -203,7 +224,7 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({ loading, error, respo
  * Converts "firstHouse" to "First House", etc.
  */
 const formatHouse = (house: string) => {
-  if (!house) return "";
+  if (!house) return '';
   return house
     .replace(/([A-Z])/g, ' $1') // Add space before capital letters
     .replace(/^./, (str: string) => str.toUpperCase()) // Capitalize first letter
