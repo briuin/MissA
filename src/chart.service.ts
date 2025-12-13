@@ -138,9 +138,9 @@ export const fetchChartData = async ({
         let pollStatus = 'PENDING';
         let analysis = null;
 
-        // Poll every 2 seconds
+        // Poll every 5 seconds
         while (pollStatus === 'PENDING') {
-          await new Promise(resolve => setTimeout(resolve, 2000));
+          await new Promise(resolve => setTimeout(resolve, 5000));
           const pollResponse = await axios.get(
             `${BASE_URL}/api/analysis/${jobId}`,
           );
