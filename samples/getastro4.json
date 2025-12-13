@@ -1,0 +1,645 @@
+{
+  "status": "COMPLETED",
+  "analysis": {
+    "cusp": {
+      "headers": ["宮位", "起點黃經", "星座", "度數"],
+      "data": [
+        {
+          "house": "firstHouse",
+          "houseLabel": "第一宮",
+          "startLongitude": "288°00′",
+          "zodiacSign": "摩羯座♑",
+          "degrees": "288°00′"
+        },
+        {
+          "house": "secondHouse",
+          "houseLabel": "第二宮",
+          "startLongitude": "317°00′",
+          "zodiacSign": "水瓶座♒",
+          "degrees": "317°00′"
+        },
+        {
+          "house": "thirdHouse",
+          "houseLabel": "第三宮",
+          "startLongitude": "349°00′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "349°00′"
+        },
+        {
+          "house": "fourthHouse",
+          "houseLabel": "第四宮",
+          "startLongitude": "22°00′",
+          "zodiacSign": "牡羊座♈",
+          "degrees": "22°00′"
+        },
+        {
+          "house": "fifthHouse",
+          "houseLabel": "第五宮",
+          "startLongitude": "52°00′",
+          "zodiacSign": "金牛座♉",
+          "degrees": "52°00′"
+        },
+        {
+          "house": "sixthHouse",
+          "houseLabel": "第六宮",
+          "startLongitude": "80°00′",
+          "zodiacSign": "雙子座♊",
+          "degrees": "80°00′"
+        },
+        {
+          "house": "seventhHouse",
+          "houseLabel": "第七宮",
+          "startLongitude": "108°00′",
+          "zodiacSign": "巨蟹座♋",
+          "degrees": "108°00′"
+        },
+        {
+          "house": "eighthHouse",
+          "houseLabel": "第八宮",
+          "startLongitude": "137°00′",
+          "zodiacSign": "獅子座♌",
+          "degrees": "137°00′"
+        },
+        {
+          "house": "ninthHouse",
+          "houseLabel": "第九宮",
+          "startLongitude": "169°00′",
+          "zodiacSign": "處女座♍",
+          "degrees": "169°00′"
+        },
+        {
+          "house": "tenthHouse",
+          "houseLabel": "第十宮",
+          "startLongitude": "202°00′",
+          "zodiacSign": "天秤座♎",
+          "degrees": "202°00′"
+        },
+        {
+          "house": "eleventhHouse",
+          "houseLabel": "第十一宮",
+          "startLongitude": "232°00′",
+          "zodiacSign": "天蠍座♏",
+          "degrees": "232°00′"
+        },
+        {
+          "house": "twelfthHouse",
+          "houseLabel": "第十二宮",
+          "startLongitude": "260°00′",
+          "zodiacSign": "射手座♐",
+          "degrees": "260°00′"
+        }
+      ],
+      "analysis": [
+        "上升落在摩羯座♑：外在給人的感覺務實、克制、重視成果與責任，做決定傾向先評估風險與可行性。",
+        "第十宮起點在天秤座♎：事業與名聲容易與合作、人際平衡、審美品味或協調談判能力連結。",
+        "第十一宮起點在天蠍座♏：交友與團隊關係重視忠誠與深度，圈子可能小而精，對共同目標投入度高。",
+        "第十二宮起點在射手座♐：內在世界需要自由與意義感；獨處、旅行、學習或信念探索能幫助充電與整理情緒。",
+        "第四宮起點在牡羊座♈：家庭議題帶有行動派與自主性，容易主動扛起家中決策或希望在家裡保有主導權。",
+        "第六宮起點在雙子座♊：日常工作適合多工與資訊流動，能在需要溝通、寫作、整合訊息的環境發揮。",
+        "第七宮起點在巨蟹座♋：關係中重視安全感與照顧感，容易被溫柔、願意建立家庭感的人吸引。",
+        "第八宮起點在獅子座♌：共享資源與親密關係需要被看見與被尊重，處理金錢或界線時要避免面子壓力。",
+        "第九宮起點在處女座♍：學習與遠行偏好有計畫、可驗證的方法，對細節、專業與實用性要求高。",
+        "第五宮起點在金牛座♉：創作、戀愛與享樂追求穩定與感官品質，慢熱但投入後很持久。",
+        "第二宮起點在水瓶座♒：金錢與價值觀帶有獨立性，收入來源可能多元或與新科技、團隊、社群相關。",
+        "第三宮起點在雙魚座♓：表達方式帶直覺與同理，靈感強，但需要用結構化方法避免資訊混亂。"
+      ]
+    },
+    "planet": {
+      "headers": ["行星", "黃經", "星座", "度數", "宮位"],
+      "data": [
+        {
+          "planet": "Sun",
+          "planetLabel": "☉ 太陽",
+          "longitude": "261°02′",
+          "zodiacSign": "射手座♐",
+          "degrees": "261°02′",
+          "house": "twelfthHouse",
+          "houseLabel": "第十二宮"
+        },
+        {
+          "planet": "Moon",
+          "planetLabel": "☽ 月亮",
+          "longitude": "256°23′",
+          "zodiacSign": "射手座♐",
+          "degrees": "256°23′",
+          "house": "eleventhHouse",
+          "houseLabel": "第十一宮"
+        },
+        {
+          "planet": "Mercury",
+          "planetLabel": "☿ 水星",
+          "longitude": "249°05′",
+          "zodiacSign": "射手座♐",
+          "degrees": "249°05′",
+          "house": "eleventhHouse",
+          "houseLabel": "第十一宮"
+        },
+        {
+          "planet": "Venus",
+          "planetLabel": "♀ 金星",
+          "longitude": "252°38′",
+          "zodiacSign": "射手座♐",
+          "degrees": "252°38′",
+          "house": "eleventhHouse",
+          "houseLabel": "第十一宮"
+        },
+        {
+          "planet": "Mars",
+          "planetLabel": "♂ 火星",
+          "longitude": "264°46′",
+          "zodiacSign": "射手座♐",
+          "degrees": "264°46′",
+          "house": "twelfthHouse",
+          "houseLabel": "第十二宮"
+        },
+        {
+          "planet": "Jupiter",
+          "planetLabel": "♃ 木星",
+          "longitude": "216°33′",
+          "zodiacSign": "天蠍座♏",
+          "degrees": "216°33′",
+          "house": "tenthHouse",
+          "houseLabel": "第十宮"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "longitude": "325°23′",
+          "zodiacSign": "水瓶座♒",
+          "degrees": "325°23′",
+          "house": "secondHouse",
+          "houseLabel": "第二宮"
+        },
+        {
+          "planet": "Uranus",
+          "planetLabel": "♅ 天王星",
+          "longitude": "290°31′",
+          "zodiacSign": "摩羯座♑",
+          "degrees": "290°31′",
+          "house": "firstHouse",
+          "houseLabel": "第一宮"
+        },
+        {
+          "planet": "Neptune",
+          "planetLabel": "♆ 海王星",
+          "longitude": "289°47′",
+          "zodiacSign": "摩羯座♑",
+          "degrees": "289°47′",
+          "house": "firstHouse",
+          "houseLabel": "第一宮"
+        },
+        {
+          "planet": "Pluto",
+          "planetLabel": "♇ 冥王星",
+          "longitude": "236°25′",
+          "zodiacSign": "天蠍座♏",
+          "degrees": "236°25′",
+          "house": "eleventhHouse",
+          "houseLabel": "第十一宮"
+        }
+      ],
+      "analysis": [
+        "射手座能量集中：太陽、月亮、水星、金星都在射手座♐，人生主題圍繞「尋找意義、擴展視野、追求自由與真誠」，喜歡把事情說清楚、講遠景與可能性。",
+        "太陽在第十二宮：自我認同較內向或需要私密空間來醞釀力量，適合幕後整合、研究、療癒、創作；要避免把壓力悶著不說。",
+        "月亮與水星、金星同落第十一宮：情緒與安全感常來自朋友、社群與共同理想；擅長在團隊中發起議題、凝聚共識，也容易因人際期待而情緒起伏。",
+        "火星在第十二宮：行動力多半在看不見的地方累積，適合長線準備與低調突破；若長期壓抑，可能以睡眠、焦躁或爆發式反彈表現，需要有規律的排解管道。",
+        "木星在天蠍座♏且位於第十宮：職涯上靠洞察力、危機處理、資源整合而擴張，適合深度研究、金融資源、心理、偵查或需要信任與保密的領域。",
+        "土星在水瓶座♒且位於第二宮：對金錢與自我價值感要求嚴謹，擅長長期規劃與建立穩定制度；課題是別把自我價值過度綁在產出或資產上。",
+        "天王星與海王星同在摩羯座♑且位於第一宮：外在氣質一方面理性務實，一方面帶理想與直覺；人生會不時出現自我定位的大轉彎，需要在「現實結構」與「理想願景」間找到可落地的路。",
+        "冥王星在天蠍座♏且位於第十一宮：社交圈與團體經驗帶有強烈轉化色彩，容易在關鍵人脈或集體議題中扮演推動深層改變的角色。",
+        "整體元素偏火與土：既有射手的熱情推進，也有摩羯的耐力與企圖，適合把遠景拆解為可執行的路線。",
+        "人際與內在並重：第十一宮與第十二宮行星多，代表「理想社群」與「獨處整合」都很重要；學會在投入群體與保留界線之間切換，是能量管理的關鍵。"
+      ]
+    },
+    "aspect": {
+      "headers": ["行星一", "相位", "行星二", "容許度"],
+      "data": [
+        {
+          "planet1": "Sun",
+          "planet1Label": "☉ 太陽",
+          "planet2": "Moon",
+          "planet2Label": "☽ 月亮",
+          "aspect": "conjunction",
+          "aspectLabel": "合相",
+          "angle": "4°39′"
+        },
+        {
+          "planet1": "Sun",
+          "planet1Label": "☉ 太陽",
+          "planet2": "Mars",
+          "planet2Label": "♂ 火星",
+          "aspect": "conjunction",
+          "aspectLabel": "合相",
+          "angle": "3°44′"
+        },
+        {
+          "planet1": "Sun",
+          "planet1Label": "☉ 太陽",
+          "planet2": "Saturn",
+          "planet2Label": "♄ 土星",
+          "aspect": "sextile",
+          "aspectLabel": "六合",
+          "angle": "4°21′"
+        },
+        {
+          "planet1": "Moon",
+          "planet1Label": "☽ 月亮",
+          "planet2": "Venus",
+          "planet2Label": "♀ 金星",
+          "aspect": "conjunction",
+          "aspectLabel": "合相",
+          "angle": "3°45′"
+        },
+        {
+          "planet1": "Mercury",
+          "planet1Label": "☿ 水星",
+          "planet2": "Venus",
+          "planet2Label": "♀ 金星",
+          "aspect": "conjunction",
+          "aspectLabel": "合相",
+          "angle": "3°33′"
+        },
+        {
+          "planet1": "Mars",
+          "planet1Label": "♂ 火星",
+          "planet2": "Saturn",
+          "planet2Label": "♄ 土星",
+          "aspect": "sextile",
+          "aspectLabel": "六合",
+          "angle": "0°38′"
+        },
+        {
+          "planet1": "Saturn",
+          "planet1Label": "♄ 土星",
+          "planet2": "Pluto",
+          "planet2Label": "♇ 冥王星",
+          "aspect": "square",
+          "aspectLabel": "四分相",
+          "angle": "1°02′"
+        },
+        {
+          "planet1": "Uranus",
+          "planet1Label": "♅ 天王星",
+          "planet2": "Neptune",
+          "planet2Label": "♆ 海王星",
+          "aspect": "conjunction",
+          "aspectLabel": "合相",
+          "angle": "0°44′"
+        }
+      ],
+      "analysis": [
+        "太陽合相月亮：自我意志與情緒需求連動強，做事很看「感覺對不對」；優點是投入度高、目標一致，挑戰是情緒一來容易全盤帶走判斷。",
+        "太陽合相火星：行動力與企圖心旺盛，敢衝、敢表態，適合開疆闢土；需要留意衝動、過度燃燒與把壓力轉成急躁。",
+        "太陽六合土星：能把理想落地，做事有節奏與承諾感；在需要長期累積的領域反而越做越穩。",
+        "月亮合相金星：人緣與親和力佳，重視情感交流與價值共鳴；在友誼與關係裡容易用「好相處」維持和諧，但也要敢說出真實需求。",
+        "水星合相金星：表達有美感與說服力，適合文字、語言、談判、行銷與社群溝通；做決策時要避免只選「聽起來好」而忽略細節。",
+        "火星六合土星（容許度很小）：耐力強、執行力穩，能把大計畫拆解成步驟並持續推進，是少見的「有衝勁也有持久力」配置。",
+        "土星四分冥王星：面對權力、控制與資源分配時容易感到壓迫或必須硬碰硬；課題是建立健康界線與制度，而非用極端方式證明自己。",
+        "天王星合相海王星：直覺創新與理想想像力同時強，容易在「改革現實」與「追求願景」之間找到獨特路徑；需要避免把不確定性浪漫化，仍要保留驗證機制。"
+      ]
+    },
+    "transit": {
+      "headers": [
+        "流年行星",
+        "目前黃經",
+        "星座",
+        "度數",
+        "對本命行星相位",
+        "容許度",
+        "影響重點（簡述）",
+        "提示"
+      ],
+      "data": [
+        {
+          "planet": "Sun",
+          "planetLabel": "☉ 太陽",
+          "currentLongitude": "261°54′",
+          "zodiacSign": "射手座♐",
+          "degrees": "261°54′",
+          "aspectToNatalPlanet": "Sun",
+          "aspectToNatalPlanetLabel": "☉ 太陽",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "0°52′",
+          "effect": "年度個人主題被點亮：適合重新設定目標、刷新自我定位，做出「我想成為誰」的選擇。"
+        },
+        {
+          "planet": "Sun",
+          "planetLabel": "☉ 太陽",
+          "currentLongitude": "261°54′",
+          "zodiacSign": "射手座♐",
+          "degrees": "261°54′",
+          "aspectToNatalPlanet": "Moon",
+          "aspectToNatalPlanetLabel": "☽ 月亮",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "5°31′",
+          "effect": "心情與自我意志更同步：容易把情緒直接帶進決策；適合坦白溝通與自我照顧。"
+        },
+        {
+          "planet": "Sun",
+          "planetLabel": "☉ 太陽",
+          "currentLongitude": "261°54′",
+          "zodiacSign": "射手座♐",
+          "degrees": "261°54′",
+          "aspectToNatalPlanet": "Mars",
+          "aspectToNatalPlanetLabel": "♂ 火星",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "2°52′",
+          "effect": "行動力上升：適合推動卡關的事、做體能訓練或快速收斂方案；避免急躁與硬碰硬。"
+        },
+        {
+          "planet": "Sun",
+          "planetLabel": "☉ 太陽",
+          "currentLongitude": "261°54′",
+          "zodiacSign": "射手座♐",
+          "degrees": "261°54′",
+          "aspectToNatalPlanet": "Saturn",
+          "aspectToNatalPlanetLabel": "♄ 土星",
+          "aspectType": "sextile",
+          "aspectTypeLabel": "六合",
+          "angle": "3°29′",
+          "effect": "把想法落地更順：適合訂計畫、排期程、與權責相關的人溝通，能穩健推進。"
+        },
+        {
+          "planet": "Mercury",
+          "planetLabel": "☿ 水星",
+          "currentLongitude": "242°11′",
+          "zodiacSign": "射手座♐",
+          "degrees": "242°11′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "5°46′",
+          "effect": "思考更深入、語氣更有穿透力：適合研究、談判、做關鍵決策；留意言語過度強勢或鑽牛角尖。"
+        },
+        {
+          "planet": "Venus",
+          "planetLabel": "♀ 金星",
+          "currentLongitude": "256°08′",
+          "zodiacSign": "射手座♐",
+          "degrees": "256°08′",
+          "aspectToNatalPlanet": "Moon",
+          "aspectToNatalPlanetLabel": "☽ 月亮",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "0°15′",
+          "effect": "情緒更柔軟、好感度提升：適合修復關係、社交聚會、享受美食與藝術；也更需要被理解與陪伴。"
+        },
+        {
+          "planet": "Venus",
+          "planetLabel": "♀ 金星",
+          "currentLongitude": "256°08′",
+          "zodiacSign": "射手座♐",
+          "degrees": "256°08′",
+          "aspectToNatalPlanet": "Sun",
+          "aspectToNatalPlanetLabel": "☉ 太陽",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "4°54′",
+          "effect": "魅力與自信加分：有利於曝光、告白、合作邀約與形象包裝；避免為了討好而失去原則。"
+        },
+        {
+          "planet": "Venus",
+          "planetLabel": "♀ 金星",
+          "currentLongitude": "256°08′",
+          "zodiacSign": "射手座♐",
+          "degrees": "256°08′",
+          "aspectToNatalPlanet": "Venus",
+          "aspectToNatalPlanetLabel": "♀ 金星",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "3°30′",
+          "effect": "感情與金錢議題成焦點：適合調整消費與關係界線，也利於談條件、定價與審美相關決策。"
+        },
+        {
+          "planet": "Mars",
+          "planetLabel": "♂ 火星",
+          "currentLongitude": "268°46′",
+          "zodiacSign": "射手座♐",
+          "degrees": "268°46′",
+          "aspectToNatalPlanet": "Mars",
+          "aspectToNatalPlanetLabel": "♂ 火星",
+          "aspectType": "conjunction",
+          "aspectTypeLabel": "合相",
+          "angle": "4°00′",
+          "effect": "衝勁回歸：適合開工、運動、把拖延的事一次推進；注意火氣、睡眠與過勞。"
+        },
+        {
+          "planet": "Mars",
+          "planetLabel": "♂ 火星",
+          "currentLongitude": "268°46′",
+          "zodiacSign": "射手座♐",
+          "degrees": "268°46′",
+          "aspectToNatalPlanet": "Saturn",
+          "aspectToNatalPlanetLabel": "♄ 土星",
+          "aspectType": "sextile",
+          "aspectTypeLabel": "六合",
+          "angle": "3°22′",
+          "effect": "做事更有效率：能把力氣用在刀口上，適合制定執行規範、練基本功、穩定輸出。"
+        },
+        {
+          "planet": "Jupiter",
+          "planetLabel": "♃ 木星",
+          "currentLongitude": "113°30′",
+          "zodiacSign": "巨蟹座♋",
+          "degrees": "113°30′",
+          "aspectToNatalPlanet": "Uranus",
+          "aspectToNatalPlanetLabel": "♅ 天王星",
+          "aspectType": "opposition",
+          "aspectTypeLabel": "對沖",
+          "angle": "2°59′",
+          "effect": "自由與承諾拉扯：機會來得突然，容易想立刻轉向；先確認代價與時間成本再拍板。"
+        },
+        {
+          "planet": "Jupiter",
+          "planetLabel": "♃ 木星",
+          "currentLongitude": "113°30′",
+          "zodiacSign": "巨蟹座♋",
+          "degrees": "113°30′",
+          "aspectToNatalPlanet": "Neptune",
+          "aspectToNatalPlanetLabel": "♆ 海王星",
+          "aspectType": "opposition",
+          "aspectTypeLabel": "對沖",
+          "angle": "3°44′",
+          "effect": "想像力被放大：適合創作與願景規劃，但也更容易高估或理想化；重要承諾要加上驗證。"
+        },
+        {
+          "planet": "Jupiter",
+          "planetLabel": "♃ 木星",
+          "currentLongitude": "113°30′",
+          "zodiacSign": "巨蟹座♋",
+          "degrees": "113°30′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "trine",
+          "aspectTypeLabel": "三分相",
+          "angle": "2°55′",
+          "effect": "成長帶來深層轉化：有利於擴張影響力、資源整合與長線投資；把握機會做結構性升級。"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "Uranus",
+          "aspectToNatalPlanetLabel": "♅ 天王星",
+          "aspectType": "sextile",
+          "aspectTypeLabel": "六合",
+          "angle": "4°52′",
+          "effect": "穩健改革：能在不推翻全部的前提下更新做法，適合調整制度、流程與生活作息。"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "Neptune",
+          "aspectToNatalPlanetLabel": "♆ 海王星",
+          "aspectType": "sextile",
+          "aspectTypeLabel": "六合",
+          "angle": "5°36′",
+          "effect": "理想更容易落地：適合把靈感變成可執行計畫，例如建立習慣、專案管理或療癒練習。"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "Sun",
+          "aspectToNatalPlanetLabel": "☉ 太陽",
+          "aspectType": "square",
+          "aspectTypeLabel": "四分相",
+          "angle": "4°20′",
+          "effect": "責任與壓力上升：需要面對現實限制、重新分配時間與精力；適合做減法與訂下界線。"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "Mars",
+          "aspectToNatalPlanetLabel": "♂ 火星",
+          "aspectType": "square",
+          "aspectTypeLabel": "四分相",
+          "angle": "0°37′",
+          "effect": "行動受考驗：容易覺得卡、慢或被要求更嚴謹；用紀律與節奏取代硬衝，可避免挫折累積。"
+        },
+        {
+          "planet": "Saturn",
+          "planetLabel": "♄ 土星",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "trine",
+          "aspectTypeLabel": "三分相",
+          "angle": "1°03′",
+          "effect": "長線重建的助力：適合整理權責、資源與關係結構，做出可持續的深層調整。"
+        },
+        {
+          "planet": "Uranus",
+          "planetLabel": "♅ 天王星",
+          "currentLongitude": "58°33′",
+          "zodiacSign": "金牛座♉",
+          "degrees": "58°33′",
+          "aspectToNatalPlanet": "Saturn",
+          "aspectToNatalPlanetLabel": "♄ 土星",
+          "aspectType": "square",
+          "aspectTypeLabel": "四分相",
+          "angle": "3°10′",
+          "effect": "穩定與變動衝突：舊規則不再適用，可能被迫更新理財、價值觀或工作方式；避免一刀切，採分段調整更安全。"
+        },
+        {
+          "planet": "Uranus",
+          "planetLabel": "♅ 天王星",
+          "currentLongitude": "58°33′",
+          "zodiacSign": "金牛座♉",
+          "degrees": "58°33′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "opposition",
+          "aspectTypeLabel": "對沖",
+          "angle": "2°08′",
+          "effect": "人際與圈層洗牌：團體、社群或合作關係可能突然變動；把握機會淘汰消耗性的連結。"
+        },
+        {
+          "planet": "Neptune",
+          "planetLabel": "♆ 海王星",
+          "currentLongitude": "359°23′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "359°23′",
+          "aspectToNatalPlanet": "Mars",
+          "aspectToNatalPlanetLabel": "♂ 火星",
+          "aspectType": "square",
+          "aspectTypeLabel": "四分相",
+          "angle": "4°37′",
+          "effect": "能量容易分散：想做很多但不易落實，或出現拖延與倦怠；先確立優先順序與具體步驟。"
+        },
+        {
+          "planet": "Neptune",
+          "planetLabel": "♆ 海王星",
+          "currentLongitude": "359°23′",
+          "zodiacSign": "雙魚座♓",
+          "degrees": "359°23′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "trine",
+          "aspectTypeLabel": "三分相",
+          "angle": "2°57′",
+          "effect": "深層療癒與放下：適合做心理整理、創作與身心靈修復，把過往包袱轉化為力量。"
+        },
+        {
+          "planet": "Pluto",
+          "planetLabel": "♇ 冥王星",
+          "currentLongitude": "302°12′",
+          "zodiacSign": "水瓶座♒",
+          "degrees": "302°12′",
+          "aspectToNatalPlanet": "Jupiter",
+          "aspectToNatalPlanetLabel": "♃ 木星",
+          "aspectType": "square",
+          "aspectTypeLabel": "四分相",
+          "angle": "4°21′",
+          "effect": "擴張方式需要改版：對權力、資源與目標的企圖變強；避免冒進，採策略與風控才能把成長做大。"
+        },
+        {
+          "planet": "Pluto",
+          "planetLabel": "♇ 冥王星",
+          "currentLongitude": "302°12′",
+          "zodiacSign": "水瓶座♒",
+          "degrees": "302°12′",
+          "aspectToNatalPlanet": "Pluto",
+          "aspectToNatalPlanetLabel": "♇ 冥王星",
+          "aspectType": "sextile",
+          "aspectTypeLabel": "六合",
+          "angle": "5°47′",
+          "effect": "轉型契機啟動：適合建立新身份、新技能或新社群定位，讓未來數年的變化有更好基礎。"
+        }
+      ],
+      "analysis": [
+        "近期太陽回到本命太陽附近：個人年度週期重置，適合盤點過去一年、設定下一年的核心方向與優先順序。",
+        "金星強烈觸發月亮與本命金星：人際、情感與享受感上升，利於修復關係、社交曝光與美感相關決策，但也要管理衝動消費。",
+        "土星對太陽與火星形成緊張相位：責任、期限與標準變得更明確；把目標拆成可執行步驟、維持規律作息，能把壓力轉成成果。",
+        "木星對沖天王星與海王星：外界機會與內心渴望都在放大，容易想「直接換軌」；重大決策先試運行、保留退場機制更穩。",
+        "天王星對土星、冥王星施壓：舊結構正在鬆動，尤其與金錢、價值或團體關係相關；越能主動調整規則，越不容易被動承受變化。",
+        "海王星與火星的拉扯：體力與專注度可能起伏，適合用運動、冥想、規律睡眠來穩定能量，並避免含糊不清的承諾。",
+        "冥王星對木星的挑戰：想把格局做大，但需要更精準的策略與資源配置；選擇「少而關鍵」的戰場會更有效。",
+        "整體建議：先穩住基本盤（時間、健康、金錢與界線），再把握社交與合作帶來的助力，將願景落到可驗證的里程碑。"
+      ]
+    },
+    "ascendant": "上升：摩羯座♑ 18°22′（務實、目標導向，重視責任與長期成果）\n天頂：天秤座♎（合作、公平與美感影響職涯定位）",
+    "horoscope": {
+      "day": "13日（月中）​當日重點：先定優先順序再行動。​避免分心，多做可落地的決策。​在關係中保持真誠與界線並存。",
+      "month": "12月（年度收尾）​當月重點：整理、結算與更新計畫。​適合回顧成果、修正方法，並為下一階段建立更穩的節奏。",
+      "year": "2025年（轉型與落地並行）​年度重點：在壓力與機會並存的情況下，透過紀律與策略完成結構性升級。​把理想拆成可執行的步驟，會比單靠熱情更快看到結果。"
+    },
+    "summary": "本命盤射手座能量強，重視自由、真誠與意義感；上升摩羯座讓你做事更有企圖與耐力，能把遠景落地。近期流年太陽與金星強力啟動自我與情感人際主題，適合重新定位目標、修復關係並提升曝光；同時土星帶來期限與責任考驗，提醒你用節奏、界線與制度把壓力轉成成果。把握機會時保持風控與驗證，你會更穩地完成轉型與擴張。"
+  }
+}
