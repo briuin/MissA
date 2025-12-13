@@ -1,0 +1,473 @@
+{
+  "status": "COMPLETED",
+  "analysis": {
+    "cusp": {
+      "headers": ["宮位", "起始黃經（°）", "黃道星座", "度數"],
+      "data": [
+        {
+          "house": "firstHouse",
+          "startLongitude": "288°00′",
+          "zodiacSign": "Capricorn♑",
+          "degrees": "288°00′"
+        },
+        {
+          "house": "secondHouse",
+          "startLongitude": "317°00′",
+          "zodiacSign": "Aquarius♒",
+          "degrees": "317°00′"
+        },
+        {
+          "house": "thirdHouse",
+          "startLongitude": "349°00′",
+          "zodiacSign": "Pisces♓",
+          "degrees": "349°00′"
+        },
+        {
+          "house": "fourthHouse",
+          "startLongitude": "22°00′",
+          "zodiacSign": "Aries♈",
+          "degrees": "22°00′"
+        },
+        {
+          "house": "fifthHouse",
+          "startLongitude": "52°00′",
+          "zodiacSign": "Taurus♉",
+          "degrees": "52°00′"
+        },
+        {
+          "house": "sixthHouse",
+          "startLongitude": "80°00′",
+          "zodiacSign": "Gemini♊",
+          "degrees": "80°00′"
+        },
+        {
+          "house": "seventhHouse",
+          "startLongitude": "108°00′",
+          "zodiacSign": "Cancer♋",
+          "degrees": "108°00′"
+        },
+        {
+          "house": "eighthHouse",
+          "startLongitude": "137°00′",
+          "zodiacSign": "Leo♌",
+          "degrees": "137°00′"
+        },
+        {
+          "house": "ninthHouse",
+          "startLongitude": "169°00′",
+          "zodiacSign": "Virgo♍",
+          "degrees": "169°00′"
+        },
+        {
+          "house": "tenthHouse",
+          "startLongitude": "202°00′",
+          "zodiacSign": "Libra♎",
+          "degrees": "202°00′"
+        },
+        {
+          "house": "eleventhHouse",
+          "startLongitude": "232°00′",
+          "zodiacSign": "Scorpio♏",
+          "degrees": "232°00′"
+        },
+        {
+          "house": "twelfthHouse",
+          "startLongitude": "260°00′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "260°00′"
+        }
+      ],
+      "analysis": [
+        "第一宮落在摩羯：外在形象務實、重視目標與責任。",
+        "第二宮水瓶：金錢價值觀偏獨立與創新，收入方式多元。",
+        "第三宮雙魚：溝通帶直覺與同理，容易用感受理解世界。",
+        "第四宮牡羊：家庭/內在需要主導感，重視自主與行動。",
+        "第五宮金牛：戀愛與創作偏穩定、重視享受與安全感。",
+        "第六宮雙子：工作節奏多變，適合資訊、溝通與多工。",
+        "第七宮巨蟹：關係重情感連結與照顧，尋求安全與歸屬。",
+        "第八宮獅子：共享資源/親密議題需要被看見與尊重。",
+        "第九宮處女：學習與信念務實細緻，重視方法與證據。",
+        "第十宮天秤：事業重協調與合作，適合公關、談判或美感領域。",
+        "第十一宮天蠍：社交圈深度連結，重忠誠與共同目標。",
+        "第十二宮射手：潛意識渴望自由與意義，適合內在探索與遠景規劃。"
+      ]
+    },
+    "planet": {
+      "headers": ["行星", "黃經（°）", "黃道星座", "度數", "所在宮位"],
+      "data": [
+        {
+          "planet": "☉ Sun",
+          "longitude": "261°02′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "261°02′",
+          "house": "twelfthHouse"
+        },
+        {
+          "planet": "☽ Moon",
+          "longitude": "256°23′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "256°23′",
+          "house": "eleventhHouse"
+        },
+        {
+          "planet": "☿ Mercury",
+          "longitude": "249°05′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "249°05′",
+          "house": "eleventhHouse"
+        },
+        {
+          "planet": "♀ Venus",
+          "longitude": "252°38′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "252°38′",
+          "house": "eleventhHouse"
+        },
+        {
+          "planet": "♂ Mars",
+          "longitude": "264°46′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "264°46′",
+          "house": "twelfthHouse"
+        },
+        {
+          "planet": "♃ Jupiter",
+          "longitude": "216°33′",
+          "zodiacSign": "Scorpio♏",
+          "degrees": "216°33′",
+          "house": "tenthHouse"
+        },
+        {
+          "planet": "♄ Saturn",
+          "longitude": "325°23′",
+          "zodiacSign": "Aquarius♒",
+          "degrees": "325°23′",
+          "house": "secondHouse"
+        },
+        {
+          "planet": "♅ Uranus",
+          "longitude": "290°31′",
+          "zodiacSign": "Capricorn♑",
+          "degrees": "290°31′",
+          "house": "firstHouse"
+        },
+        {
+          "planet": "♆ Neptune",
+          "longitude": "289°47′",
+          "zodiacSign": "Capricorn♑",
+          "degrees": "289°47′",
+          "house": "firstHouse"
+        },
+        {
+          "planet": "♇ Pluto",
+          "longitude": "236°25′",
+          "zodiacSign": "Scorpio♏",
+          "degrees": "236°25′",
+          "house": "eleventhHouse"
+        }
+      ],
+      "analysis": [
+        "太陽射手在12宮：內在追求意義與自由，適合幕後整合、療癒與精神探索。",
+        "月亮射手在11宮：情緒與歸屬感來自朋友圈與共同理想，喜歡開放氛圍。",
+        "水星射手在11宮：思考宏觀直率，擅長理念傳播與社群溝通。",
+        "金星射手在11宮：感情重視自由與共同成長，易在社交圈結緣。",
+        "火星射手在12宮：行動力偏向私下累積，適合獨立訓練但要留意壓抑怒氣。",
+        "木星天蠍在10宮：事業擴張來自洞察力與資源整合，適合研究/金融/管理。",
+        "土星水瓶在2宮：財務需要長期制度與紀律，重視可持續的價值與技能。",
+        "天王摩羯在1宮：個人風格獨特務實，人生路線會有突然的自我更新。",
+        "海王摩羯在1宮：氣質帶理想與朦朧感，需建立清晰界線以免被投射。",
+        "冥王天蠍在11宮：社群/人脈帶強烈轉化力，擅長深度結盟與資源動員。"
+      ]
+    },
+    "aspect": {
+      "headers": ["行星1", "行星2", "相位", "角度"],
+      "data": [
+        {
+          "planet1": "☉ Sun",
+          "planet2": "☽ Moon",
+          "aspect": "conjunction",
+          "angle": "4°39′"
+        },
+        {
+          "planet1": "☉ Sun",
+          "planet2": "♀ Venus",
+          "aspect": "conjunction",
+          "angle": "8°24′"
+        },
+        {
+          "planet1": "☉ Sun",
+          "planet2": "♂ Mars",
+          "aspect": "conjunction",
+          "angle": "3°44′"
+        },
+        {
+          "planet1": "☉ Sun",
+          "planet2": "♄ Saturn",
+          "aspect": "sextile",
+          "angle": "4°21′"
+        },
+        {
+          "planet1": "☽ Moon",
+          "planet2": "☿ Mercury",
+          "aspect": "conjunction",
+          "angle": "7°18′"
+        },
+        {
+          "planet1": "☽ Moon",
+          "planet2": "♀ Venus",
+          "aspect": "conjunction",
+          "angle": "3°45′"
+        },
+        {
+          "planet1": "☽ Moon",
+          "planet2": "♂ Mars",
+          "aspect": "conjunction",
+          "angle": "8°23′"
+        },
+        {
+          "planet1": "☿ Mercury",
+          "planet2": "♀ Venus",
+          "aspect": "conjunction",
+          "angle": "3°33′"
+        },
+        {
+          "planet1": "♂ Mars",
+          "planet2": "♄ Saturn",
+          "aspect": "sextile",
+          "angle": "0°38′"
+        },
+        {
+          "planet1": "♄ Saturn",
+          "planet2": "♇ Pluto",
+          "aspect": "square",
+          "angle": "1°02′"
+        },
+        {
+          "planet1": "♅ Uranus",
+          "planet2": "♆ Neptune",
+          "aspect": "conjunction",
+          "angle": "0°44′"
+        },
+        {
+          "planet1": "♅ Uranus",
+          "planet2": "♇ Pluto",
+          "aspect": "sextile",
+          "angle": "5°54′"
+        }
+      ],
+      "analysis": [
+        "日月合相：自我意志與情緒一致，行動更果斷，但也較主觀。",
+        "太陽合金星：魅力與審美突出，重視和諧與人際吸引力。",
+        "太陽合火星：精力旺盛、行動直接，適合主動突破但避免衝動。",
+        "太陽六合土星：能把理想落地，靠紀律與規劃累積成就。",
+        "月亮合水星：情緒與思考連動，直覺表達強，但易情緒化溝通。",
+        "月亮合金星：情感柔軟、重關係美感，渴望被喜愛與被接納。",
+        "月亮合火星：情緒帶動行動，反應快；需要學會冷卻與自我調節。",
+        "水星合金星：口才與社交感佳，適合寫作、談判、藝術與公關。",
+        "火星六合土星：衝勁與耐力兼具，擅長長期訓練與穩定輸出。",
+        "土星四分冥王：壓力促使重建結構，人生會經歷責任與控制議題的考驗。",
+        "天王合海王：理想與改革結合，對潮流與集體願景敏銳。",
+        "天王六合冥王：具系統性變革力，能以務實方式推動深層轉型。"
+      ]
+    },
+    "transit": {
+      "headers": [
+        "行星",
+        "當前黃經（°）",
+        "黃道星座",
+        "度數",
+        "相位對應本命盤的行星",
+        "相位類型",
+        "角度",
+        "影響"
+      ],
+      "data": [
+        {
+          "planet": "☉ Sun",
+          "currentLongitude": "261°49′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "261°49′",
+          "aspectToNatalPlanet": "☉ Sun",
+          "aspectType": "conjunction",
+          "angle": "0°47′",
+          "effect": "個人年度能量回歸期：自我定位、目標與意志感提升，適合設定新計畫。"
+        },
+        {
+          "planet": "☉ Sun",
+          "currentLongitude": "261°49′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "261°49′",
+          "aspectToNatalPlanet": "♂ Mars",
+          "aspectType": "conjunction",
+          "angle": "2°57′",
+          "effect": "行動力與企圖心被點燃；適合主動推進，但要避免急躁與過度消耗。"
+        },
+        {
+          "planet": "☉ Sun",
+          "currentLongitude": "261°49′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "261°49′",
+          "aspectToNatalPlanet": "♄ Saturn",
+          "aspectType": "sextile",
+          "angle": "3°34′",
+          "effect": "利於把想法落實到制度與日程，做長期規劃、整頓工作流程有成效。"
+        },
+        {
+          "planet": "♀ Venus",
+          "currentLongitude": "256°02′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "256°02′",
+          "aspectToNatalPlanet": "☽ Moon",
+          "aspectType": "conjunction",
+          "angle": "0°21′",
+          "effect": "情緒更柔和、關係需求上升；適合修復關係、社交聚會與自我照顧。"
+        },
+        {
+          "planet": "♀ Venus",
+          "currentLongitude": "256°02′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "256°02′",
+          "aspectToNatalPlanet": "♀ Venus",
+          "aspectType": "conjunction",
+          "angle": "3°24′",
+          "effect": "人際魅力與愉悅感增強；利於感情互動、談合作與審美/娛樂活動。"
+        },
+        {
+          "planet": "♂ Mars",
+          "currentLongitude": "268°42′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "268°42′",
+          "aspectToNatalPlanet": "♂ Mars",
+          "aspectType": "conjunction",
+          "angle": "3°56′",
+          "effect": "火星回歸期附近：行動與競爭心增強，適合啟動新任務但避免硬碰硬。"
+        },
+        {
+          "planet": "♂ Mars",
+          "currentLongitude": "268°42′",
+          "zodiacSign": "Sagittarius♐",
+          "degrees": "268°42′",
+          "aspectToNatalPlanet": "♄ Saturn",
+          "aspectType": "sextile",
+          "angle": "3°19′",
+          "effect": "把衝勁導入紀律：適合規律訓練、專案排程、把難事拆解後穩定完成。"
+        },
+        {
+          "planet": "♃ Jupiter",
+          "currentLongitude": "113°31′",
+          "zodiacSign": "Cancer♋",
+          "degrees": "113°31′",
+          "aspectToNatalPlanet": "♅ Uranus",
+          "aspectType": "opposition",
+          "angle": "3°00′",
+          "effect": "擴張與變動拉扯：外在機會增加但也伴隨不確定，需平衡冒險與風險控管。"
+        },
+        {
+          "planet": "♃ Jupiter",
+          "currentLongitude": "113°31′",
+          "zodiacSign": "Cancer♋",
+          "degrees": "113°31′",
+          "aspectToNatalPlanet": "♆ Neptune",
+          "aspectType": "opposition",
+          "angle": "3°44′",
+          "effect": "理想放大但易過度樂觀：適合靈感與願景，但投資/承諾需查核細節。"
+        },
+        {
+          "planet": "♃ Jupiter",
+          "currentLongitude": "113°31′",
+          "zodiacSign": "Cancer♋",
+          "degrees": "113°31′",
+          "aspectToNatalPlanet": "♇ Pluto",
+          "aspectType": "trine",
+          "angle": "2°54′",
+          "effect": "成長帶來深層轉化：利於資源整合、影響力擴張與長期策略布局。"
+        },
+        {
+          "planet": "♄ Saturn",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "Pisces♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "☉ Sun",
+          "aspectType": "square",
+          "angle": "4°20′",
+          "effect": "責任壓力測試期：需要調整目標與界線，務實面對限制可換來穩固成果。"
+        },
+        {
+          "planet": "♄ Saturn",
+          "currentLongitude": "355°22′",
+          "zodiacSign": "Pisces♓",
+          "degrees": "355°22′",
+          "aspectToNatalPlanet": "♅ Uranus",
+          "aspectType": "sextile",
+          "angle": "4°52′",
+          "effect": "把改革做成可行方案：適合制度升級、工作方式更新與長期技能建設。"
+        },
+        {
+          "planet": "♅ Uranus",
+          "currentLongitude": "58°33′",
+          "zodiacSign": "Taurus♉",
+          "degrees": "58°33′",
+          "aspectToNatalPlanet": "♄ Saturn",
+          "aspectType": "square",
+          "angle": "3°10′",
+          "effect": "舊結構被迫更新：財務/價值或安全感議題出現變動，需彈性調整規則。"
+        },
+        {
+          "planet": "♅ Uranus",
+          "currentLongitude": "58°33′",
+          "zodiacSign": "Taurus♉",
+          "degrees": "58°33′",
+          "aspectToNatalPlanet": "♇ Pluto",
+          "aspectType": "opposition",
+          "angle": "2°08′",
+          "effect": "突發轉向與深層重組並行：人際/群體權力結構可能翻新，宜留退路並快速迭代。"
+        },
+        {
+          "planet": "♆ Neptune",
+          "currentLongitude": "359°23′",
+          "zodiacSign": "Pisces♓",
+          "degrees": "359°23′",
+          "aspectToNatalPlanet": "♂ Mars",
+          "aspectType": "square",
+          "angle": "4°37′",
+          "effect": "行動力易被稀釋：避免不清楚的目標與消耗戰，適合以休息/靈感型工作代替硬推。"
+        },
+        {
+          "planet": "♇ Pluto",
+          "currentLongitude": "302°12′",
+          "zodiacSign": "Aquarius♒",
+          "degrees": "302°12′",
+          "aspectToNatalPlanet": "♃ Jupiter",
+          "aspectType": "square",
+          "angle": "4°21′",
+          "effect": "擴張與控制的角力：事業/名望或資源議題需要重整策略，避免過度押注與極端決策。"
+        }
+      ],
+      "analysis": [
+        "太陽合本命太陽：適合立新年度方向與自我更新。",
+        "太陽合本命火星：做事更有衝勁，注意情緒性衝動。",
+        "太陽六合本命土星：用紀律把能量變成成果。",
+        "金星合本命月亮：關係與情緒更需要溫柔互動。",
+        "金星合本命金星：桃花、人緣與合作談判的加分期。",
+        "火星合本命火星：新一輪行動週期啟動，宜聚焦一兩個戰場。",
+        "火星六合本命土星：適合定計畫、做訓練、把難題穩定推完。",
+        "木星沖本命天王：機會與變數同時放大，先做風險評估再衝。",
+        "木星沖本命海王：理想感上升，需避免資訊不明下承諾。",
+        "木星拱本命冥王：適合做長線布局與資源整合。",
+        "土星刑本命太陽：壓力期也是成熟期，重整優先順序。",
+        "土星六合本命天王：改革能落地，做系統性升級最有利。",
+        "天王刑本命土星：打破舊規則，需建立新的可持續方案。",
+        "天王沖本命冥王：關係與圈層的權力結構可能翻新，保持彈性。",
+        "海王刑本命火星：降低硬拚，先澄清目標與界線。",
+        "冥王刑本命木星：擴張策略需要去泡沫化，避免走極端。"
+      ]
+    },
+    "ascendant": "上升點為摩羯座Capricorn♑ 18°22′：給人沉穩、可靠與目標導向的第一印象，做事講求效率與結果，越到後期越能靠耐力與紀律累積成就。",
+    "horoscope": {
+      "day": "今日適合把優先順序排清楚：先完成最關鍵的一件事，再處理社交與雜務。",
+      "month": "本月重點在社群/人脈與長期規劃：把合作條件寫清楚、把時間留給真正重要的目標。",
+      "year": "今年主題是「結構調整」：在責任與自由之間找到新平衡，財務與工作模式宜走向更穩健的制度化。"
+    },
+    "summary": "本命盤射手能量集中（太陽/月亮/水星/金星/火星），外向追求成長與意義，但多落11-12宮，顯示你很需要社群支持與幕後沉澱；上升摩羯讓你能把理想落地。事業面（木星10宮天蠍）擅長深度洞察與資源整合；財務面（土星2宮水瓶）宜以長期規劃與技能變現建立安全感。"
+  }
+}
