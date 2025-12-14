@@ -48,7 +48,7 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
 
         {/* Cusp Table */}
         {cusp && (
-          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto">
+          <div className="bg-base-200 rounded-lg p-4 mb-4 overflow-x-auto ">
             <h3 className="text-xl font-semibold mb-2">Cusp Analysis</h3>
             <table className="table table-zebra w-full">
               <thead>
